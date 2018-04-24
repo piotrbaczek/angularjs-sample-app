@@ -1,0 +1,15 @@
+{
+  "name": "angularjs-sample-app",
+  "version": "0.0.1",
+  "repository": "https://github.com/piotrgolasz/angularjs-sample-app",
+  "license": "",
+  "dependencies": {
+    "angular": "^1.6.10",
+    "@uirouter/angularjs": "^1.0.3",
+    "angular-animate": "^1.6.10",
+    "angular-aria": "^1.6.10",
+    "angular-material": "^1.1.8",
+    "angular-messages": "^1.6.10",
+    "angular-bootstrap": "^0.12.2"
+  }
+}
