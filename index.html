@@ -3,8 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-resource/angular-resource.js"></script>
+    <script src="js/sampleapp.js"></script>
+    <script src="js/configs/router.js"></script>
+    <script src="js/controllers/BaseController.js"></script>
+    <script src="js/directives/myCustomDirective.js"></script>
+    <script src="js/services/randomString.js"></script>
 </head>
-<body>
-
+<body ng-app="SampleApp">
+<div ng-controller="BaseController">
+    <pre>{{model}}</pre>
+    <my-custom-directive ng-model="model"></my-custom-directive>
+    Licznik: {{counter}}
+</div>
 </body>
 </html>
