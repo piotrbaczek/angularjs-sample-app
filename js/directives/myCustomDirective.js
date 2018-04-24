@@ -8,11 +8,13 @@ angular.module("SampleApp")
             },
             template: '<button class="btn btn-primary" ng-click="myCustomDirectiveController.changeValue()">Kliknij mnie</button>',
             replace: true,
-            controller: function ($scope) {
-                let vm = this;
-
-                vm.changeValue = function () {
-                    vm.model = randomString.generateString();
+            controller: function () {
+                /**
+                 * Change value of model
+                 * @return void
+                 */
+                this.changeValue = function () {
+                    this.model = randomString.generateString();
                 };
             }
         }
