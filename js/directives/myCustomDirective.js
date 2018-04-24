@@ -1,21 +1,20 @@
 angular.module("SampleApp")
-    .directive("myCustomDirective", ['randomString', function (randomString) {
+    .directive("myCustomDirective", ['randomString', '$timeout', function (randomString, $timeout) {
         return {
-            restrict: 'E',
-            controllerAs: 'myCustomDirectiveController',
-            bindToController: {
+            restrict: 'A',
+            scope: {
                 model: '=ngModel'
             },
-            template: '<button class="btn btn-primary" ng-click="myCustomDirectiveController.changeValue()">Kliknij mnie</button>',
-            replace: true,
-            controller: function () {
-                /**
-                 * Change value of model
-                 * @return void
-                 */
-                this.changeValue = function () {
-                    this.model = randomString.generateString();
-                };
+            link: function ($scope, $element, $attr) {
+                $element.on('click', function () {
+                    $timeout(function () {
+                        $scope.model = randomString.generateString();
+                    });
+                });
+
+                $scope.$on('$destroy',function () {
+                    $element.off();
+                });
             }
         }
     }]);

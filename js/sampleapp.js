@@ -1,3 +1,4 @@
 angular.module("SampleApp", [
-    'ngResource'
+    'ngResource',
+    'ngMaterial'
 ]);
