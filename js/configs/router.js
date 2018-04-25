@@ -1,3 +1,14 @@
-/**
- * Created by nzpetter on 24.04.2018.
- */
+angular.module('SampleApp')
+    .config(['$stateProvider', function ($stateProvider) {
+        $stateProvider
+            .state({
+                name: 'base',
+                url: '/',
+                template:'Welcome!'
+            })
+            .state({
+                name: 'login',
+                url: '/login',
+                template: 'login'
+            });
+    }]).run();
