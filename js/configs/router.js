@@ -9,6 +9,7 @@ angular.module('SampleApp')
             .state({
                 name: 'login',
                 url: '/login',
-                template: 'login'
+                controller:'BaseController',
+                template: 'login {{model}} <md-button class="md-primary md-raised" my-custom-directive ng-model="model">Kliknij mnie</md-button>'
             });
     }]).run();
