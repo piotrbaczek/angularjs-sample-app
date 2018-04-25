@@ -9,6 +9,7 @@
     <script src="node_modules/angular-material/angular-material.js"></script>
     <script src="node_modules/angular-animate/angular-animate.js"></script>
     <script src="node_modules/angular-aria/angular-aria.js"></script>
+    <script src="node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
     <script src="js/sampleapp.js"></script>
     <script src="js/configs/router.js"></script>
     <script src="js/controllers/BaseController.js"></script>
@@ -16,14 +17,10 @@
     <script src="js/services/randomString.js"></script>
 </head>
 <body ng-app="SampleApp">
-<div ng-controller="BaseController">
-    <pre>{{model}}</pre>
-    <md-button class="md-primary md-raised" my-custom-directive ng-model="model">Kliknij mnie</md-button>
-    Licznik: {{counter}}
-    <br/>
-    <ul ng-repeat="element in elements">
-        <li>{{element}}</li>
-    </ul>
+<div>
+    <a ui-sref="login">Login</a>
+    <a ui-sref="base">Strona startowa</a>
+    <ui-view>Some content</ui-view>
 </div>
 </body>
 </html>
