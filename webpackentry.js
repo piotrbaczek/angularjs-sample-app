@@ -5,7 +5,6 @@ req.keys().forEach(function (key) {
     req(key);
 });
 
-
 require('@uirouter/angularjs/release/angular-ui-router.js');
 require('angular-resource');
 require('angular-material');

@@ -1,5 +1,6 @@
 module.exports = {
-    entry: ["./webpackapp.js"],
+    mode: "development",
+    entry: ["./webpackentry.js"],
     output: {
         path: __dirname + "/public/js/",
         filename: "output.js"
@@ -18,6 +19,5 @@ module.exports = {
     },
     resolve: {
         extensions: ['.js']
-    },
-    mode: "development"
+    }
 };
