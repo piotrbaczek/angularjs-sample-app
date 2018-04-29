@@ -5,7 +5,7 @@ angular.module("SampleApp")
             scope: {
                 model: '=ngModel'
             },
-            link: function ($scope, $element, $attr) {
+            link: function ($scope, $element) {
                 $element.on('click', function () {
                     $timeout(function () {
                         $scope.model = randomString.generateString();

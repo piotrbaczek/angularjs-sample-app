@@ -2,7 +2,6 @@ angular.module("SampleApp")
     .controller("BaseController", ['$scope', 'randomString', function ($scope, randomString) {
         $scope.model = randomString.generateString();
         $scope.counter = 0;
-        $scope.elements = ['a','b','c','d'];
 
         let modelWatcher = $scope.$watch('model', function (newValue, oldValue) {
             if (newValue && newValue !== oldValue) {
@@ -10,7 +9,7 @@ angular.module("SampleApp")
             }
         });
 
-        $scope.$on('$destroy',function () {
+        $scope.$on('$destroy', function () {
             modelWatcher();
         });
     }]);
