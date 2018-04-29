@@ -1,7 +1,8 @@
 module.exports = {
-    entry: "./js/sampleapp.js",
+    entry: ["./webpackapp.js"],
     output: {
-        filename: "bundle.js"
+        path: __dirname + "/public/js/",
+        filename: "output.js"
     },
     module: {
         rules: [
