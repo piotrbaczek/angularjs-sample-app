@@ -5,8 +5,7 @@ require('angular-material');
 require('angular-animate');
 require('angular-aria');
 
-require('./js/app');
-let req = require.context("./js", true, /^(?!.*app.js)((.*\.(js\.*))[^.]*$)/im);
+let req = require.context("./js");
 req.keys().forEach(function (key) {
     req(key);
 });

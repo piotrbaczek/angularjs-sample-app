@@ -1,15 +1,18 @@
-angular.module('SampleApp')
-    .config(['$stateProvider', function ($stateProvider) {
-        $stateProvider
-            .state({
-                name: 'base',
-                url: '/',
-                template:'Welcome!'
-            })
-            .state({
-                name: 'login',
-                url: '/login',
-                controller:'BaseController',
-                template: 'login {{model}} <md-button class="md-primary md-raised" my-custom-directive ng-model="model">Kliknij mnie</md-button>'
-            });
-    }]).run();
+angular.module('Skanstull')
+    .config(['$stateProvider',
+        '$urlRouterProvider',
+        function ($stateProvider,
+                  $urlRouterProvider) {
+            $stateProvider
+                .state('login', {
+                    url: '/',
+                    controller: 'LoginCtrl',
+                    templateUrl: 'template/login.html'
+                })
+                .state('dashboard', {
+                    url: '/dashboard',
+                    controller: 'BaseCtrl',
+                    templateUrl: 'template/dashboard.html'
+                });
+            $urlRouterProvider.otherwise('/');
+        }]).run();
