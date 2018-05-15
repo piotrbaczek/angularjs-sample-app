@@ -1,8 +1,10 @@
 angular.module('Skanstull')
     .config(['$stateProvider',
         '$urlRouterProvider',
+        '$mdIconProvider',
         function ($stateProvider,
-                  $urlRouterProvider) {
+                  $urlRouterProvider,
+                  $mdIconProvider) {
             $stateProvider
                 .state('login', {
                     url: '/',
@@ -15,4 +17,6 @@ angular.module('Skanstull')
                     templateUrl: 'template/dashboard.html'
                 });
             $urlRouterProvider.otherwise('/');
+
+            $mdIconProvider.fontSet('md', 'material-icons');
         }]).run();
