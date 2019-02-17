@@ -4,6 +4,7 @@ const Encore = require('@symfony/webpack-encore');
 Encore
     .configureRuntimeEnvironment('development')
     .cleanupOutputBeforeBuild()
+    .disableSingleRuntimeChunk()
     // read main.js     -> output as web/build/app.js
     .addEntry('appjs', './webpackentry.js')
     // read global.scss -> output as web/build/global.css
