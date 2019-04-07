@@ -6,23 +6,23 @@
   "dependencies": {
     "@uirouter/angularjs": "1.0.22",
     "ajv": "6.9.1",
-    "angular": "1.7.7",
-    "angular-animate": "1.7.7",
-    "angular-aria": "1.7.7",
+    "angular": "1.7.8",
+    "angular-animate": "1.7.8",
+    "angular-aria": "1.7.8",
     "angular-bootstrap": "0.12.2",
-    "angular-material": "1.1.12",
-    "angular-messages": "1.7.7",
-    "angular-resource": "1.7.7",
+    "angular-material": "1.1.18",
+    "angular-messages": "1.7.8",
+    "angular-resource": "1.7.8",
     "babel-core": "7.0.0-beta.3",
     "babel-loader": "8.0.5",
     "css-loader": "1.*",
-    "@symfony/webpack-encore": "0.23.0",
+    "@symfony/webpack-encore": "0.26.0",
     "node-sass": "4.11.0",
     "sass-loader": "7.1.0",
     "webpack": "4.29.4",
     "webpack-cli": "3.2.3"
   },
   "scripts": {
-    "dev": "webpack --mode development"
+    "dev": "webpack --mode development --watch"
   }
 }
